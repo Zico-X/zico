@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studying CSS</title>
+    <link rel="stylesheet" href="st.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="midlaj">
+        <form action="">
+            <div class="login">
+                <h2>LOGIN</h2>
+            </div>
+            <div class="input">
+                <i class='bx bx-user'></i>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <i id="togglePassword" class='bx bx-show' style="cursor: pointer;"></i> <!-- Eye icon -->
+            </div>
+            <div class="remember">
+                <label><input type="checkbox"> Remember me</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" class="forgot">Forgot password?</a>
+            </div>
+            <div class="submit">
+                <button type="button" id="loginButton" class="button">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('loginButton').addEventListener('click', function() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!username || !password) {
+                alert('Please fill in both username and password.');
+            } else {
+                // Redirect to another page upon successful login
+                window.location.href = "https://www.youtube.com"; // Replace with your target URL
+            }
+        });        
+
+        // Toggle password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        togglePassword.addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            // Toggle the icon
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide');
+        });
+    </script>
+</body>
+</html>

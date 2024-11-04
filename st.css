@@ -1,0 +1,88 @@
+@import url("httpa://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;9007display=swap");
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1547994770-e5d8509b114d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.midlaj {
+    background-color: ;
+    width: 100%;
+    max-width: 400px; /* Optional: Limit width for better appearance */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.input, 
+.remember {
+    display: flex;
+    justify-content: space-between; /* Space between label/input */
+    margin-bottom: 10px; /* Space below input fields */
+}
+
+input {
+    padding: 10px;
+    margin: 5px; /* Space around each input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Full width minus padding */
+}
+
+.remember {
+    align-items: center; /* Center vertically */
+    color: blue;
+}
+
+.forgot {
+    color: blue; /* Color for the link */
+    text-decoration: none; /* Remove underline */
+}
+
+.forgot:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.submit {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space above the login section */
+}
+
+button {
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px;
+    background-color: green; /* Button background */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+    background-color: blue; /* Changes to blue on hover */
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+.input i {
+    position: relative;
+    right: 5px; /* Space from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(25%); /* Adjust for exact center */
+    font-size: 25px; /* Icon size */
+    color: black; /* Icon color */
+}
+
+.button {
+    font-size: 20px;
+}
