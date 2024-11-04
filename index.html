@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studying CSS</title>
+    <title>MIDLAJ</title>
     <link rel="stylesheet" href="st.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="midlaj">
-        <form action="">
+        <form id="loginForm" action="">
             <div class="login">
                 <h2>LOGIN</h2>
             </div>
             <div class="input">
                 <i class='bx bx-user'></i>
-                <input type="text" id="username" placeholder="Username" required>
+                <input type="text" id="username" placeholder="Username" required aria-label="Username">
             </div>
             <div class="input">
                 <i class='bx bxs-lock-alt'></i>
-                <input type="password" id="password" placeholder="Password" required>
-                <i id="togglePassword" class='bx bx-show' style="cursor: pointer;"></i> <!-- Eye icon -->
+                <input type="password" id="password" placeholder="Password" required aria-label="Password">
+                <i id="togglePassword" class='bx bx-show' style="cursor: pointer;"></i>
             </div>
             <div class="remember">
                 <label><input type="checkbox"> Remember me</label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="#" class="forgot">Forgot password?</a>
             </div>
             <div class="submit">
-                <button type="button" id="loginButton" class="button">Login</button>
+                <button type="submit" class="button">Login</button>
             </div>
         </form>
     </div>
+    <div class="mid">
+         <a href="#" class="forgot"><h3>MIDLAJ</h3></a>
+    </div>
 
     <script type="text/javascript">
-        document.getElementById('loginButton').addEventListener('click', function() {
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
 
@@ -46,13 +49,11 @@
             }
         });        
 
-        // Toggle password visibility
         const togglePassword = document.getElementById('togglePassword');
         togglePassword.addEventListener('click', function() {
             const passwordInput = document.getElementById('password');
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
-            // Toggle the icon
             this.classList.toggle('bx-show');
             this.classList.toggle('bx-hide');
         });
