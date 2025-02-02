@@ -14,6 +14,24 @@ header {
     color: #fff;
 }
 
+ /* Hide the menu by default for mobile devices */
+        nav ul {
+            display: none;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Show menu when toggled */
+        nav ul.show {
+            display: block;
+        }
+
+        /* For mobile, you can adjust the menu display */
+        .menu-icon {
+            cursor: pointer;
+        }
+
+        /* Add any additional styling here for better responsiveness */
 header .logo {
     font-size: 1.5em;
     font-weight: bold;
