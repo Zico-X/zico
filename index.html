@@ -14,12 +14,12 @@
         <div class="logo">Guest</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flip.html">Shop</a></li>
                 <li><a href="#product">Product</a></li>
                 <li><a href="#page">Page</a></li>
                 <li><a href="#docs">Docs</a></li>
-                <li><a href="https://vi-mind-cargo-publicity.trycloudflare.com">Sign-up</a></li>
+                <li><a href="#sign">Sign-up</a></li>
             </ul>
         </nav>
         <div class="icons">
@@ -41,6 +41,21 @@
     </section>
 
     <!-- Add more sections as needed -->
+
+    <script>
+        // Toggle menu visibility on icon click
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+
+        // Optional: To make the "Shop Now" button functional
+        function goToShop() {
+            window.location.href = 'flip.html'; // Redirect to Shop page
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
