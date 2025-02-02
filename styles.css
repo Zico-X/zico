@@ -97,6 +97,7 @@ header .icons i {
     header {
         flex-direction: column;
         text-align: center;
+        padding: 15px;
     }
 
     header .logo {
@@ -105,28 +106,34 @@ header .icons i {
 
     header nav ul {
         flex-direction: column;
+        margin-top: 10px;
     }
 
     header nav ul li {
         margin: 10px 0;
     }
 
+    header .icons {
+        display: none; /* Hide icons on small screens */
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 30px 15px; /* Slightly less padding */
     }
 
     .hero-content h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .hero-content p {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .hero-content button {
-        font-size: 1em;
-        padding: 10px 20px;
+        font-size: 1.1em;
+        padding: 12px 22px;
     }
 
     .hero-image {
@@ -134,17 +141,26 @@ header .icons i {
     }
 }
 
+/* Mobile View for Smaller Screens */
 @media (max-width: 480px) {
     .hero-content h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .hero-content p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .hero-content button {
-        font-size: 0.9em;
-        padding: 8px 18px;
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+    }
+
+    header {
+        padding: 10px; /* Reduce padding further on small screens */
     }
 }
